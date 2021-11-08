@@ -3,5 +3,6 @@ var glossary = new Vue({
     data: {
         currentTerm: undefined,
         currentItem: undefined,
+        DB: outerDB,
     }
 })
