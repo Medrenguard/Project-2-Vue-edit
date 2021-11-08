@@ -18,11 +18,11 @@
         <nav>
             <ul class="nav">
                 <li class="toHome"><a href="index.html"></a></li>
-                <li><a class='nv' tax='c=text' pr='1'>Текст</a></li>
-                <li><a class='nv' tax='c=img' pr='1'>Графика</a></li>
-                <li><a class='nv' tax='c=audio' pr='1'>Аудио</a></li>
-                <li><a class='nv' tax='c=video' pr='1'>Видео</a></li>
-                <li><a class='nv' tax='c=interactive' pr='1'>Интерактивность</a></li>
+                <li><a class='nv' @click='currentTerm = "text"'>Текст</a></li>
+                <li><a class='nv' @click='currentTerm = "img"'>Графика</a></li>
+                <li><a class='nv' @click='currentTerm = "audio"'>Аудио</a></li>
+                <li><a class='nv' @click='currentTerm = "video"'>Видео</a></li>
+                <li><a class='nv' @click='currentTerm = "interactive"'>Интерактивность</a></li>
             </ul>
         </nav>
         <section class="wrap main">
