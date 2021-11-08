@@ -4,12 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>reworProject-2</title>
+    <title>Терминологический словарь | "Мультимедиа технологии" v2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>
+            <div id="title_m">"Мультимедиа-технологии"</div>
+            <div id="descr_m">Терминологический словарь</div>
+        </h1>
+    </header>
     <div id="app">
-        
+        <nav>
+            <ul class="nav">
+                <li class="toHome"><a href="index.html"></a></li>
+                <li><a class='nv' tax='c=text' pr='1'>Текст</a></li>
+                <li><a class='nv' tax='c=img' pr='1'>Графика</a></li>
+                <li><a class='nv' tax='c=audio' pr='1'>Аудио</a></li>
+                <li><a class='nv' tax='c=video' pr='1'>Видео</a></li>
+                <li><a class='nv' tax='c=interactive' pr='1'>Интерактивность</a></li>
+            </ul>
+        </nav>
+        <section class="wrap main">
+            <section id="leftMenu">Выберите категорию</section>
+            <article id="content">
+                <p>
+                    <b>Мультимедиа</b> <i>(от лат. multum – много, medium - средства)</i> – сочетание в чем-либо различных способов представления информации (аудио, видео, текст, графика).
+                <p>
+                    <b>Мультимедиа</b> является обобщающим понятием, под ним стоит понимать как <b>продукт</b>, сделанный на основе мультимедийной технологии или мультимедийную <b>программу-оболочку</b>, так и <b>компьютерное оснащение</b>.
+                <p>
+                    Этот термин появился в 80-х годах. И хоть разные виды мультимедиа существовали и ранее, переход в <b>информационную эпоху</b> обозначил потребность и готовность аудитории к объединению всех известных на тот момент медиа-технологий в одном, включая ключевой атрибут современного понятия мультимедиа - <b>интерактивность</b>.
+                <p class="quote">
+                    «<b>Мультимедиа</b> – это современная компьютерная информационная технология, обеспечивающая работу с неподвижными изображениями, видеоизображением, анимацией, текстом и звуковым рядом.»
+            </article>
+        </section>
     </div>
+    <footer>
+        <div><a href="about.html">Служебная информация</a></div>
+        <div>Copyright © 2017. All rights reserved(no)</div>
+    </footer>
     <script src="https://ru.vuejs.org/js/vue.js"></script>
     <script src="db.js"></script>
     <script src="main.js"></script>
