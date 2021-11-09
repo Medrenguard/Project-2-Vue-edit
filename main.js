@@ -10,7 +10,7 @@ var glossary = new Vue({
             if (this.currentTerm === undefined) {
                 return 'Выберите категорию';
             } else {
-                res = '<div class="sub-title">' + this.DB[this.currentTerm]["name"] + '</div><ul>';
+                res = '<div class="sub-title">' + this.DB[this.currentTerm]["nameRu"] + '</div><ul>';
                 for (i in this.DB[this.currentTerm]["data"]) {
                     res += '<li><a class="nv">' + this.DB[this.currentTerm]["data"][i][1] + '</li>';
                 }
