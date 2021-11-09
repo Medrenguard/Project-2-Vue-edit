@@ -18,11 +18,9 @@
         <nav>
             <ul class="nav">
                 <li class="toHome"><a href="index.html"></a></li>
-                <li><a class='nv' @click='currentTerm = "text"'>Текст</a></li>
-                <li><a class='nv' @click='currentTerm = "img"'>Графика</a></li>
-                <li><a class='nv' @click='currentTerm = "audio"'>Аудио</a></li>
-                <li><a class='nv' @click='currentTerm = "video"'>Видео</a></li>
-                <li><a class='nv' @click='currentTerm = "interactive"'>Интерактивность</a></li>
+                <li v-for="item in DB">
+                    <a class='nv' @click='currentTerm = item.nameEn'>{{ item.nameRu }}</a>
+                </li>
             </ul>
         </nav>
         <section class="wrap main">
