@@ -30,7 +30,7 @@
                     <div class="sub-title">{{ DB[currentTerm]['nameRu'] }}</div>
                     <ul>
                         <li v-for="(item, key, i) in itemsList">
-                            <a class="nv">{{ item[1] }}</a>
+                            <a class="nv" @click="currentItem = key">{{ item[1] }}</a>
                         </li>
                     </ul>
                 </div>
