@@ -24,7 +24,17 @@
             </ul>
         </nav>
         <section class="wrap main">
-            <section id="leftMenu" v-html="leftMenu"></section>
+            <section id="leftMenu">
+                <span v-if="!termIsSet">Выберите категорию</span>
+                <div v-else>
+                    <div class="sub-title">{{ DB[currentTerm]['nameRu'] }}</div>
+                    <ul>
+                        <li v-for="(item, key, i) in itemsList">
+                            <a class="nv">{{ item[1] }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <article id="content">
                 <p>
                     <b>Мультимедиа</b> <i>(от лат. multum – много, medium - средства)</i> – сочетание в чем-либо различных способов представления информации (аудио, видео, текст, графика).
