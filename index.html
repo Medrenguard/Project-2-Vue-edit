@@ -18,8 +18,8 @@
         <nav>
             <ul class="nav">
                 <li class="toHome"><a href="index.html"></a></li>
-                <li v-for="item in DB">
-                    <a class='nv' @click='currentTerm = item.nameEn'>{{ item.nameRu }}</a>
+                <li v-for="term in DB">
+                    <a class='nv' @click='currentTerm = term.nameEn'>{{ term.nameRu }}</a>
                 </li>
             </ul>
         </nav>
