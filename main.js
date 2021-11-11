@@ -16,5 +16,8 @@ var glossary = new Vue({
                 return this.DB[this.currentTerm]["data"];
             }
         },
+        itemIsSet: function() {
+            return this.currentItem != undefined;
+        },
     }
 })
