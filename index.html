@@ -47,14 +47,22 @@
                         «<b>Мультимедиа</b> – это современная компьютерная информационная технология, обеспечивающая работу с неподвижными изображениями, видеоизображением, анимацией, текстом и звуковым рядом.»
                 </div>
                 <div v-else>
-                    
+                    <b>{{ itemName }}</b>
+                    <i>{{ bracketsDescription }}</i> – 
+                    <figure v-if="imgDescription" class="mImg">
+                        <a :href="getImgSrc" target="_blank">
+                            <img :src="getImgSrc">
+                        </a>
+                        <figcaption>{{ imgDescription }}</figcaption>
+                    </figure>
+                    <span v-html="content"></span>
                 </div>
             </article>
         </section>
     </div>
     <footer>
         <div><a href="about.html">Служебная информация</a></div>
-        <div>Copyright © 2017. All rights reserved(no)</div>
+        <div>Copyright © 2022. All rights reserved(no)</div>
     </footer>
     <script src="https://ru.vuejs.org/js/vue.js"></script>
     <script src="db.js"></script>
