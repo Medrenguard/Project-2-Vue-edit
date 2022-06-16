@@ -19,7 +19,7 @@
             <ul class="nav">
                 <li class="toHome"><a href="index.html"></a></li>
                 <li v-for="term in DB">
-                    <a class='nv' @click='currentTerm = term.nameEn'>{{ term.nameRu }}</a>
+                    <a class='nv' @click='changeTerm(term.nameEn)'>{{ term.nameRu }}</a>
                 </li>
             </ul>
         </nav>
@@ -29,8 +29,8 @@
                 <div v-else>
                     <div class="sub-title">{{ DB[currentTerm]['nameRu'] }}</div>
                     <ul>
-                        <li v-for="(item, key, i) in itemsList">
-                            <a class="nv" @click="currentItem = key">{{ item[1] }}</a>
+                        <li v-for="(item, key) in itemsList">
+                            <a class="nv" @click="changeItem(key)">{{ item[1] }}</a>
                         </li>
                     </ul>
                 </div>
