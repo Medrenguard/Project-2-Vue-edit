@@ -55,6 +55,9 @@ var glossary = new Vue({
         },
         changeItem(newItem) {
             this.currentItem = newItem;
+        },
+        isActiveItem(key) {
+            return key === this.currentItem
         }
     }
 })

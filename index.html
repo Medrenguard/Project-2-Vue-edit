@@ -29,7 +29,7 @@
                 <div v-else>
                     <div class="sub-title">{{ DB[currentTerm]['nameRu'] }}</div>
                     <ul>
-                        <li v-for="(item, key) in itemsList">
+                        <li v-for="(item, key) in itemsList" :class="{ active: isActiveItem(key) }">
                             <a class="nv" @click="changeItem(key)">{{ item[1] }}</a>
                         </li>
                     </ul>
