@@ -30,7 +30,7 @@
                     <div class="sub-title">{{ DB[currentTerm]['nameRu'] }}</div>
                     <ul>
                         <li v-for="(item, key) in itemsList" :class="{ active: isActiveItem(key) }">
-                            <a class="nv" @click="changeItem(key)">{{ item[1] }}</a>
+                            <a class="nv" @click="changeItem(item, key)">{{ item[1] }}</a>
                         </li>
                     </ul>
                 </div>
@@ -65,6 +65,7 @@
         <div>Copyright © 2022. All rights reserved(no)</div>
     </footer>
     <script src="https://ru.vuejs.org/js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/domurl@2.3.4/url.min.js"></script>
     <script src="db.js"></script>
     <script src="main.js"></script>
 </body>

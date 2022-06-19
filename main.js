@@ -1,6 +1,8 @@
 var glossary = new Vue({
     el: "#app",
     data: {
+        urlParams: undefined,
+        urlStandart: 'index.html',
         currentTerm: undefined,
         oldTerm: undefined,
         currentItem: undefined,
@@ -51,13 +53,21 @@ var glossary = new Vue({
                 this.oldTerm = this.currentTerm; 
                 this.currentItem = undefined; 
             }
+            history.pushState('','', this.urlStandart + '?c=' + newTerm)
             this.currentTerm = newTerm;
         },
-        changeItem(newItem) {
-            this.currentItem = newItem;
+        changeItem(newItem, key) {
+            history.pushState('','', this.urlStandart + '?c=' + this.currentTerm + '&order=' + key + '&t=' + newItem[0] )
+            this.currentItem = key;
         },
         isActiveItem(key) {
             return key === this.currentItem
         }
+    },
+    mounted() {
+        this.urlParams = new Url().query;
+        if ('c' in this.urlParams) { this.currentTerm = this.urlParams['c'] }
+        if ('order' in this.urlParams) { this.currentItem = this.urlParams['order'] }
+        // TODO: сделать подсветку активного пункта меню
     }
 })
