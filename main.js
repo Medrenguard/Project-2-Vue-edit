@@ -11,7 +11,7 @@ var glossary = new Vue({
     },
     computed:{
         termIsSet: function() {
-            return this.currentTerm != undefined;
+            return this.currentTerm !== undefined;
         },
         itemsList: function() {
             if (this.currentTerm === undefined) {
