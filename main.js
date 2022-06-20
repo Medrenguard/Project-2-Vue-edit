@@ -57,7 +57,7 @@ var glossary = new Vue({
             this.currentTerm = newTerm;
         },
         changeItem(newItem, key) {
-            history.pushState('','', this.urlStandart + '?c=' + this.currentTerm + '&order=' + key + '&t=' + newItem[0] )
+            history.pushState('','', this.urlStandart + '?c=' + this.currentTerm + '&t=' + newItem[0] )
             this.currentItem = key;
         },
         isActiveItem(key) {
@@ -67,7 +67,6 @@ var glossary = new Vue({
     mounted() {
         this.urlParams = new Url().query;
         if ('c' in this.urlParams) { this.currentTerm = this.urlParams['c'] }
-        if ('order' in this.urlParams) { this.currentItem = this.urlParams['order'] }
-        // TODO: сделать подсветку активного пункта меню
+        if ('t' in this.urlParams) { this.currentItem = this.DB[this.currentTerm]["data"].findIndex(el => el[0] === this.urlParams['t']) }
     }
 })
